@@ -53,3 +53,9 @@ CLASSPATH=.:$CLASSPATH
 export  JAVA_HOME  PATH  CLASSPATH
 
 reboot
+# PACOTES
+install.packages(
+  c("shinydashboard","shinyalert","shinyjs","dplyr","ramdomForeste",
+    "ggthemes","formattable","DT","h2o"
+  ))
+
