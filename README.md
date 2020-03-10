@@ -69,5 +69,6 @@ install.packages(
 
 # instalar devtools shinby docker
 - instalar libssl, libxml, libxml2-dev (linux)
+- instalar xml (R)
 
 
