@@ -67,4 +67,7 @@ install.packages(
 ## INSTALACAO COM DEPENDENCIAS UTILIZAR
 - install_packages(pacote, dependencies=TRUE)
 
+# instalar devtools shinby docker
+- instalar libssl, libxml, libxml2-dev (linux)
+
 
