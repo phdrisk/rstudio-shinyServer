@@ -59,3 +59,12 @@ install.packages(
     "ggthemes","formattable","DT","h2o"
   ))
 
+# INSTALACOES NECESSARIAS
+- devtools
+- install_version(h2o, version=)
+
+# UTEIS
+## INSTALACAO COM DEPENDENCIAS UTILIZAR
+- install_packages(pacote, dependencies=TRUE)
+
+
