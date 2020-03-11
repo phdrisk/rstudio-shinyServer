@@ -1,6 +1,7 @@
 
 # DOCKER ( SHINY E RSTUDIO) - UTILIZANDO MESMA DIRETORIA FORA
 diretoria externa:diretoria interna (docker)
+
 docker run -d -itd -p 3838:3838 -v /srv/shinyapps/:/srv/shiny-server/ -v /srv/shinylog/:/var/log/shiny-server/ --name phdshiny rocker/shiny
 
 docker run -itd -p 8787:8787 -e PASSWORD=phdrisk -v /srv/shinyapps/:/home/rstudio/shiny-server  --name phdrstudio rocker/rstudio
@@ -55,7 +56,7 @@ export  JAVA_HOME  PATH  CLASSPATH
 reboot
 # PACOTES
 install.packages(
-  c("shinydashboard","shinyalert","shinyjs","dplyr","ramdomForeste",
+  c("shinydashboard","shinyalert","shinyjs","dplyr","ramdomForest",
     "ggthemes","formattable","DT","h2o"
   ))
 
@@ -71,4 +72,6 @@ install.packages(
 - instalar libssl, libxml, libxml2-dev (linux)
 - instalar xml (R)
 
+# sincronizar o h20 nos dois apps
+- install.packages("h2o", type="source", repos=(c("http://h2o-release.s3.amazonaws.com/h2o/latest_stable_R")))
 
