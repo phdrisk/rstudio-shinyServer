@@ -14,6 +14,17 @@
 - docker volume create portainer_data
 - docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 
+# DOCKER HUB - PUSH
+
+- A PARTIR DO CONTAINER (ATUALIZADO COM OS PACOTES) CRIAR UMA IMAGEM ATRAVES DO COMIT
+- docker commit phdshiny phdshiny:v2020.03.13 {cria uma imagem do container phdshiny}
+- criar um tag phdshiny:v2020.03.13 phdriskdocker/shiny:v2020.03.13
+- docker push phdriskdocker/shiny:v2020.03.13
+
+# DOCKER HUB - PULL
+- docker pull phdriskdocker/shiny:v2020.03.13
+- docker run -d -itd -p 3838:3838 -v /srv/shinyapps/:/srv/shiny-server/ -v /srv/shinylog/:/var/log/shiny-server/ --name phdshiny phdriskdocker/shiny:v2020.03.13
+
 # DOCKER ( SHINY E RSTUDIO) - UTILIZANDO MESMA DIRETORIA FORA
 diretoria externa:diretoria interna (docker)
 
