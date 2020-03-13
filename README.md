@@ -10,7 +10,9 @@
 - sudo apt install docker-ce
 - sudo systemctl status docker
 - sudo usermod -aG docker username
-
+# DOCKER PORTAINER
+- docker volume create portainer_data
+- docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 
 # DOCKER ( SHINY E RSTUDIO) - UTILIZANDO MESMA DIRETORIA FORA
 diretoria externa:diretoria interna (docker)
@@ -22,6 +24,7 @@ docker run -itd -p 8787:8787 -e PASSWORD=phdrisk -v /srv/shinyapps/:/home/rstudi
 https://www.edivaldobrito.com.br/instalar-java-no-linux-veja-como-fazer-isso-manualmente/
 
 no prompoy: apt update && apt upgrade && apt gedit ou nano
+
 ::: obs no rstudio deve-se instalar o sudo apt install default-jre
 
 
