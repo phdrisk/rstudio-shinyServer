@@ -23,7 +23,7 @@
 
 # DOCKER HUB - PULL
 - docker pull phdriskdocker/shiny:v2020.03.13
-- docker run -d -itd -p 3838:3838 -v /srv/shinyapps:/srv/shiny-server -v /srv/shinylog/:/var/log/shiny-server --name phdshiny phdriskdocker/shiny:v2020.03.13
+- docker run -d -itd -p 3838:3838 -v /srv/shinyapps:/srv/shiny-server -v /srv/shinylog:/var/log/shiny-server --name phdshiny phdriskdocker/shiny:v2020.03.13
 
 # DOCKER ( SHINY E RSTUDIO) - UTILIZANDO MESMA DIRETORIA FORA
 diretoria externa:diretoria interna (docker)
