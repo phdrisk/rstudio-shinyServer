@@ -21,6 +21,14 @@
 - criar um tag phdshiny:v2020.03.13 phdriskdocker/shiny:v2020.03.13
 - docker push phdriskdocker/shiny:v2020.03.13
 
+- ****** IMPORTANTE ******
+
+* PARA MOVER OS ARQUIVOS, CRIE UMA PASTA FORA DO SHINY-SERVER, "/home/rstudio/arquivos"
+* ENTRE NO PROMPT USANDO O PORTAINER E FACA UMA COPIA PARA ESTA PASTA 
+* -> cp /home/rstudio/shiny-server/ * -R /home/rstudio/arquivos
+
+
+
 # DOCKER HUB - PULL
 - docker pull phdriskdocker/shiny:v2020.03.13
 - docker run -d -itd -p 3838:3838 -v /srv/shinyapps:/srv/shiny-server -v /srv/shinylog:/var/log/shiny-server --name phdshiny phdriskdocker/shiny:v2020.03.13
