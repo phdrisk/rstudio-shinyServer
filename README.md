@@ -40,7 +40,7 @@ diretoria externa:diretoria interna (docker)
 
 docker run -d -itd -p 3838:3838 -v /srv/shinyapps:/srv/shiny-server -v /srv/shinylog:/var/log/shiny-server --name phdshiny rocker/shiny
 
-docker run -itd -p 8787:8787 -e PASSWORD=phdrisk -v /srv/shinyapps:/home/rstudio/shiny-server  --name phdrstudio rocker/rstudio
+docker run -itd -p 8787:8787 -e PASSWORD=phdrisk -v /srv/shinyapps:/home/rstudio/shiny-server  --name phdrstudio phdriskdocker/phdrstudio:vxx
 
 https://www.edivaldobrito.com.br/instalar-java-no-linux-veja-como-fazer-isso-manualmente/
 
@@ -105,10 +105,18 @@ install.packages(
 ## INSTALACAO COM DEPENDENCIAS UTILIZAR
 - install_packages(pacote, dependencies=TRUE)
 
-# instalar devtools shinby docker
+# instalar devtools shiny docker
 - instalar libssl, libxml, libxml2-dev (linux)
 - instalar xml (R)
 
 # sincronizar o h20 nos dois apps
 - install.packages("h2o", type="source", repos=(c("http://h2o-release.s3.amazonaws.com/h2o/latest_stable_R")))
+
+
+
+# ENVIAR A PASTA DE ARQUIVOS (JUNTO - GAMBIARRA)
+ - criar uma pasta fora da pasta "shiny-server", dentro do rstudio, no mesmo local da pasta "kitmatic": ex. arquivos/
+ - copie a pasta de dentro do shiny-server. ex shiny-server/saude para essa pasta criada: ex. arquivos/saude
+ - envie para o dockerhub
+ - ao fazer pull da imagem, mova a pasta dentro de "arquivos/" para "shiny-server"
 
