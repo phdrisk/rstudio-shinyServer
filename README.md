@@ -40,7 +40,7 @@ diretoria externa:diretoria interna (docker)
 
 docker run -d -itd -p 3838:3838 -v /srv/shinyapps:/srv/shiny-server -v /srv/shinylog:/var/log/shiny-server --name phdshiny rocker/shiny
 
-docker run -itd -p 8787:8787 -e PASSWORD=phdrisk -v /srv/shinyapps:/home/rstudio/shiny-server  --name phdrstudio phdriskdocker/phdrstudio:vxx
+docker run -itd -p 8787:8787 -e ROOT=TRUE -e PASSWORD=phdrisk -v /srv/shinyapps:/home/rstudio/shiny-server  --name phdrstudio phdriskdocker/phdrstudio:vxx
 
 https://www.edivaldobrito.com.br/instalar-java-no-linux-veja-como-fazer-isso-manualmente/
 
