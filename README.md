@@ -121,18 +121,15 @@ install.packages(
  
 # ENVIAR ARQUIVO SHINYAPP.IO
 
- https://shiny.rstudio.com/articles/shinyapps.html
- https://www.shinyapps.io 
- library(rsconnect)
- setwd("~/shiny-server/bimarketing")
+ - https://shiny.rstudio.com/articles/shinyapps.html
+ - https://www.shinyapps.io 
+ - library(rsconnect)
+ - setwd("~/shiny-server/bimarketing")
 
- rsconnect::setAccountInfo(name='phdrisk',
+ - rsconnect::setAccountInfo(name='phdrisk',
                           token='D5E65BA5F2C8D5805E0D2C3B9970AA49',
                           secret='Kr9QXbHSfsbEqCU58HDsBbY1uWd6MXdyNr5cfF5b1960')
 
-
-rsconnect::deployApp("~/shiny-server/bimarketing")
-
-
-terminateApp("bimarketing")
+- rsconnect::deployApp("~/shiny-server/bimarketing")
+- terminateApp("bimarketing")
 
