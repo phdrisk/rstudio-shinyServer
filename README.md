@@ -30,7 +30,6 @@
 * DEPOIS DE EXECUTAR O IMAGES, ABRE O RSTUDIO E ATRAVES DELE MOVA  OS ARQUIVOS PARA DENTRO DA PASTA SHINY-SERVER
 
 
-
 # DOCKER HUB - PULL
 - docker pull phdriskdocker/shiny:v2020.03.13
 - docker run -d -itd -p 3838:3838 -v /srv/shinyapps:/srv/shiny-server -v /srv/shinylog:/var/log/shiny-server --name phdshiny phdriskdocker/shiny:v2020.03.13
@@ -119,4 +118,21 @@ install.packages(
  - copie a pasta de dentro do shiny-server. ex shiny-server/saude para essa pasta criada: ex. arquivos/saude
  - envie para o dockerhub
  - ao fazer pull da imagem, mova a pasta dentro de "arquivos/" para "shiny-server"
+ 
+# ENVIAR ARQUIVO SHINYAPP.IO
+
+ https://shiny.rstudio.com/articles/shinyapps.html
+ https://www.shinyapps.io 
+ library(rsconnect)
+ setwd("~/shiny-server/bimarketing")
+
+ rsconnect::setAccountInfo(name='phdrisk',
+                          token='D5E65BA5F2C8D5805E0D2C3B9970AA49',
+                          secret='Kr9QXbHSfsbEqCU58HDsBbY1uWd6MXdyNr5cfF5b1960')
+
+
+rsconnect::deployApp("~/shiny-server/bimarketing")
+
+
+terminateApp("bimarketing")
 
