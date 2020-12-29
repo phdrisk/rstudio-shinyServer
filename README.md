@@ -133,3 +133,10 @@ install.packages(
 - rsconnect::deployApp("~/shiny-server/bimarketing")
 - terminateApp("bimarketing")
 
+# DICAS UTEIS
+```
+RenderPlot({ 
+    # MENSAGEM QUANDO O PLOT ESTA INCOMPLETO
+    validate(need(input$dataTableInfeccao_rows_selected, 'Por Favor, Selecione uma linha na tabela primeiro! ')  )
+    })
+```
