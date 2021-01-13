@@ -140,3 +140,18 @@ RenderPlot({
     validate(need(input$dataTableInfeccao_rows_selected, 'Por Favor, Selecione uma linha na tabela primeiro! ')  )
     })
 ```
+# js 
+```
+jsReload <- "shinyjs.refresh = function() { location.reload(); }"
+
+  library(shinyjs)
+  shiny::shinyApp(
+    ui = f7Page(
+      shinyjs::useShinyjs(),
+      shinyjs::extendShinyjs(text=jsReload, functions = "refresh"),
+      ....
+      shinyjs::js$refresh()
+      
+```
+
+
