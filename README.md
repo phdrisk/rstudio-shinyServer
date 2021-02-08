@@ -157,5 +157,6 @@ jsReload <- "shinyjs.refresh = function() { location.reload(); }"
 # CONFIGURAR ROTAS
 ```
  https://docs.rstudio.com/shiny-server/#redirecting
+ /etc/shiny-server/shiny-server.conf 
 ```
 
