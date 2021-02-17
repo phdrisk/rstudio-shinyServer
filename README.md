@@ -153,6 +153,17 @@ jsReload <- "shinyjs.refresh = function() { location.reload(); }"
       shinyjs::js$refresh()
       
 ```
+# DT::TABLE - MUDAR FONTE DA TABELA
+```
+font.size <- "10pt"
+options = list(dom ='t',
+           initComplete = htmlwidgets::JS(
+             "function(settings, json) {",
+             paste0("$(this.api().table().container()).css({'font-size': '", font.size, "'});"),
+             "}")               
+
+           )
+```
 
 # CONFIGURAR ROTAS
 ```
